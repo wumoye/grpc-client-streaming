@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package test;
+
+
+service TestClientSend{
+  rpc TestClientSendStream(stream TestClientSendStreamRequest) returns(TestClientSendStreamResponse){}
+}
+
+message TestClientSendStreamRequest{
+  string data = 1;
+}
+message TestClientSendStreamResponse{
+  string result = 1;
+}
